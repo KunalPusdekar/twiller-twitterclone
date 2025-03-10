@@ -6,7 +6,7 @@ const Feed = () => {
   const [post, setpost] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/post")
+    fetch("http://localhost:8081/post")
       .then((res) => res.json())
       .then((data) => {
         setpost(data);

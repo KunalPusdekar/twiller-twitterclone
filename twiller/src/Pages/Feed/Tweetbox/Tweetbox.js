@@ -26,7 +26,7 @@ const Tweetbox = () => {
     formData.set("image", image);
     axios
       .post(
-        "https://api.imgbb.com/1/upload?key=b0ea2f6cc0f276633b2a8a86d2c43335",
+        "https://api.imgbb.com/1/upload?key=823bc51f01b4c24954171a7f38a5b31d",
         formData
       )
       .then((res) => {
@@ -41,7 +41,7 @@ const Tweetbox = () => {
   const handletweet = (e) => {
     e.preventDefault();
     if (user?.providerData[0]?.providerId === "password") {
-      fetch(`http://localhost:5000/loggedinuser?email=${email}`)
+      fetch(`http://localhost:8081/loggedinuser?email=${email}`)
         .then((res) => res.json())
         .then((data) => {
           // console.log(data[0].name);
@@ -65,7 +65,7 @@ const Tweetbox = () => {
       // console.log(userpost);
       setpost("");
       setimageurl("");
-      fetch("http://localhost:5000/post", {
+      fetch("http://localhost:8081/post", {
         method: "POST",
         headers: {
           "content-type": "application/json",

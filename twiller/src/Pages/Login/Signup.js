@@ -26,7 +26,7 @@ const Signup = () => {
         name: name,
         email: email,
       };
-      fetch("http://localhost:5000/register", {
+      fetch("http://localhost:8081/register", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -65,7 +65,7 @@ const Signup = () => {
           <div className="">
             <TwitterIcon className="Twittericon" style={{ color: "skyblue" }} />
             <h2 className="heading">Happening now</h2>
-            <div class="d-flex align-items-sm-center">
+            <div className="d-flex align-items-sm-center">
               <h3 className="heading1"> Join twiller today</h3>
             </div>
             {error && <p className="errorMessage">{error}</p>}

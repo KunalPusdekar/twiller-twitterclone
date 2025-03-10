@@ -2,8 +2,8 @@ const { MongoClient, ServerApiVersion } = require("mongodb");
 const express = require("express");
 const cors = require("cors");
 const uri =
-  "";
-const port = 5000;
+  "mongodb+srv://twitter:12345@cluster0.xdvexwg.mongodb.net/";
+const port = 8081;
 
 const app = express();
 app.use(cors());

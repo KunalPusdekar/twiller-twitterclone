@@ -79,7 +79,7 @@ const Editprofile = ({ user, loggedinuser }) => {
       website,
       dob,
     };
-    fetch(`http://localhost:5000/userupdate/${user?.email}`, {
+    fetch(`http://localhost:8081/userupdate/${user?.email}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
